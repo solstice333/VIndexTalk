@@ -16,4 +16,5 @@ for (auto it = vin.cbegin(OrderType::INORDER); it != vin.cend(); ++it) {
     // Firefly("Serenity", 100),
 }
 ```
-[next](part3.md)
+
+[prev](part1.md)|[next](part3.md)

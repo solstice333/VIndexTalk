@@ -16,4 +16,4 @@ struct Firefly {
 };
 ```
 
-[next](part2.md)
+[prev](part0.md)|[next](part2.md)

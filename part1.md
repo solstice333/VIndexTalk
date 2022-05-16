@@ -1,6 +1,4 @@
-# VIndex
-
-## A Simple POD (Plain Old Data) Type
+# A Simple POD (Plain Old Data) Type
 
 ```c++
 struct Firefly {
@@ -18,3 +16,4 @@ struct Firefly {
 };
 ```
 
+[next](part2.md)

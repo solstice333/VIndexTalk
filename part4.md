@@ -7,6 +7,6 @@ vin.emplace("Serenity", 100);
 vin.emplace("02-K64", 100);
 ```
 
-Underneath all of this, the V-Index populates this:
+Underneath all of this, the V-Index generates this:
 
 ![v_index_internals](v_index_internals.png)

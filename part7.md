@@ -5,7 +5,7 @@ Designing the v-index with single ownership as the driving memory management sch
 With a mutable pointer/reference to an `std::unique_ptr`, it was easy to leverage move semantics. When editing a tree on remove, subtrees can be moved out temporarily for update, then moved back into the `std::unique_ptr` that represents the left or right child of a parent node:
 ```c++
     template <typename T>
-    std::unique_ptr<Node<T>>& _modify_proxy_tree(
+    std::unique_ptr<Node<T>>& modify_tree(
         std::unique_ptr<Node<T>>* tree, 
         const std::function<
             std::unique_ptr<Node<T>>

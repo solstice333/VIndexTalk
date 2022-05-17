@@ -8,11 +8,15 @@ Additionally, it was important that C++ does not constrain itself to aliasabilit
     
 An insert operation requires mutability from the root of the tree. As a node is inserted, it recurses through the root node, and so each node that is passed through needs to give update permissions. This is of course O(log(N)).
 
-A removal operation faces the challenge in that AVL trees with *non-index* comparator keys can have nodes with equivalent keys. For this reason, mutable references, pointing into each AVL tree, were added to allow constant time access to the target node. While this was still O(log(N)), it was convenient in that it avoided a large scale refactor, which otherwise, would have probably resulted in thrashing or API churn.
+A removal operation faces the challenge in that AVL trees with *non-index* comparator keys can have nodes with equivalent keys:
 
-![v_index_dupl_cmp_key](v_index_dupl_cmp_key.png) (#figure-1)
+![v_index_dupl_cmp_key](v_index_dupl_cmp_key.png)
 
-![v_index_dupl_cmp_key_sln](v_index_dupl_cmp_key_sln.png) (#figure-2)
+For this reason, mutable references, pointing into each AVL tree, were added to allow constant time access to the target node:
+
+![v_index_dupl_cmp_key_sln](v_index_dupl_cmp_key_sln.png)
+
+While this was still O(log(N)), it was convenient in that it avoided a large scale refactor, which otherwise, would have probably resulted in thrashing or API churn.
 
 Memory management, as expected, was automated through the natural single ownership model of a parent node and its children. Because of this, excessive refactoring was avoided. 
 

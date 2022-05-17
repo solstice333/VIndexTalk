@@ -1,4 +1,4 @@
-# VIndex
+# V-Index
 
 A data structure that achieves DB index-like behavior
 

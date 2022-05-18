@@ -1,4 +1,4 @@
-# A Simple POD (Plain Old Data) Type
+# A Simple (Mostly) POD Type
 
 ```c++
 struct Firefly {

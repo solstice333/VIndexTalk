@@ -1,7 +1,7 @@
 # A Convenient API To Achieve DB Index-like Behavior
 
 ```c++
-auto vin = VIndex(make_extractor(Firefly, name)); // index Firefly::name
+auto vin = make_vindex(Firefly, name); // index Firefly::name
 vin.emplace("01-K64", 50);
 vin.emplace("Serenity", 100);
 vin.emplace("02-K64", 100);
